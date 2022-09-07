@@ -8,22 +8,10 @@ def rot_cifrado(mensaje,numero):
         aux = aux + diccionario[(diccionario.find(i) + numero ) % len(diccionario)]
     return aux
 
-def rot18(mensaje):
-    aux = ''
-    for i in mensaje:
-        aux = aux + diccionario[(diccionario.find(i) + 18 ) % len(diccionario)]
-    return aux
-
 def rot_descifrado(mensaje,numero):
     aux = ''
     for i in mensaje:
         aux = aux + diccionario[(diccionario.find(i) - numero ) % len(diccionario)]
-    return aux
-
-def rot_5(mensaje):
-    aux = ''
-    for i in mensaje:
-        aux = aux + diccionario[(diccionario.find(i) - 5 ) % len(diccionario)]
     return aux
 
 def vigenere(mensaje,clave_original,modo):

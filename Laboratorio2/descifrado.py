@@ -4,6 +4,7 @@ def algoritmo_descifrado(mensaje):
     MensajeModificado = vigenere(mensaje,'monomarcelo','descifrado')
     mensaje_vigenere = vigenere(MensajeModificado,'hellomoto','descifrado')
     descifrado_completo = rot_descifrado(mensaje_vigenere,20)
+    print('Mensaje decrifrado correctamente')
     return descifrado_completo
 
 if __name__ == '__main__':
