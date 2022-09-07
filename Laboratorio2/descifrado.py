@@ -14,8 +14,8 @@ if __name__ == '__main__':
     mensaje = archivo_leido[0].replace('\n',"")
     hash_cifrado = archivo_leido[1]
     MensajeCodificado = algoritmo_descifrado(mensaje)
+    print('El mensaje decifrado es:', MensajeCodificado)
     hash_decifrado = hashlib.md5(MensajeCodificado.encode('utf-8')).hexdigest()
-
     if hash_cifrado == hash_decifrado: 
         print('El mensaje no fue adulterado')
     else: 
