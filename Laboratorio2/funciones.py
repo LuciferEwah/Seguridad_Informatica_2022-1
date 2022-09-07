@@ -1,4 +1,6 @@
 import string
+import hashlib
+
 diccionario = string.ascii_lowercase
 def rot_cifrado(mensaje,numero):
     aux = ''
