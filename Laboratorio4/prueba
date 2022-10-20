@@ -1,0 +1,22 @@
+from Crypto.Cipher import DES
+from secrets import token_bytes
+import os
+
+
+file = open("Laboratorio4\mensajeentrada.txt", "r")
+mensaje_entrada = file.readline().lower()
+key = token_bytes(8) #(solo 8)
+iv = token_bytes(8)	#Vector de inicialización
+
+# Creó un objeto de cifrado DE DES
+file = open("Laboratorio4\mensajeentrada.txt", "r")
+# Datos necesarios
+mensaje_entrada = str(file.readline().lower()).encode()
+
+
+cipher1 = DES.new(key, DES.MODE_CFB, iv)
+msg = cipher1.encrypt(mensaje_entrada)
+# Creó un objeto de descifrado 
+cipher2 = DES.new(key, DES.MODE_CFB, iv)
+file = open("Laboratorio4\mensajerecibido.txt", "w+")
+file.write( cipher2.decrypt(msg).decode() + os.linesep)
