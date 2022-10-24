@@ -5,9 +5,9 @@
     <title>esto es principal</title>
 </head>
 <body>
-    <h1>g = {{g}} p = {{p}}</h1>
+    <h1>generador(g) = {{g}} primo(p) = {{p}}</h1>
     <form action="/servidor" method="post">
-        <label for="dato1">Ingresa un b: </label>
+        <label for="dato1">Ingresa una llave privada(b) menor que {{p}}: </label>
         <input type="number" name="dato1"><br>
         <input type="submit" value="Enviar">
     </form>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cliente</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/cliente.css') }}">
+</head>
+<body>
+    <h1>tu llave publica es:{{B}}, llave publica del sistema:{{A}}</h1>
+    {% if K1 == K2 %}
+    <h1>La sincronización es segura</h1>
+    <h1>El mensaje codificado con des: {{codificadoDes}}</h1>
+    <h3>El mensaje decodificado: "{{mensaje1}}"</h3>
+    <h1>El mensaje codificado con des3 y AES: {{codificado3DesAES}}</h1>
+    <h3>El mensaje decodificado: "{{mensaje2}}"</h3>
+
+    {% else %}
+    <h1>Cuidao</h1>
+    {%endif%}
+</body>
+
+
+</html>
