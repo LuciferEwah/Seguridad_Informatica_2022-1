@@ -28,16 +28,16 @@ def descifrado_des(texto,key,iv):
     mensaje_recibido = cipher2.decrypt(texto).decode()
     return str(mensaje_recibido)
 
-def descifrado_des(texto,key,iv):
-    cipher2 = DES.new(key, DES.MODE_CFB, iv)
-    mensaje_recibido = cipher2.decrypt(texto).decode()
-    return str(mensaje_recibido)
-
 def cifrado_des3(texto,key,iv):
     cipher1 = DES3.new(key, DES3.MODE_CFB, iv)
     mensaje_codificado = cipher1.encrypt(texto)
     # Creó un objeto de descifrado (descifrado cifrado no puede usar la misma clave)
     return mensaje_codificado
+
+def descifrado_des3(texto,key,iv):
+    cipher2 = DES3.new(key, DES3.MODE_CFB, iv)
+    mensaje_recibido = cipher2.decrypt(texto).decode()
+    return str(mensaje_recibido)
 
 def cifrado_AES(mensaje):
     cipher = AES.new(keyAES, AES.MODE_EAX)
@@ -54,16 +54,10 @@ def descifrado_AES(nonce, ciphertext, tag):
     except:
         return "mensaje alterado"
 
-def descifrado_des3(texto,key,iv):
-    cipher2 = DES3.new(key, DES3.MODE_CFB, iv)
-    mensaje_recibido = cipher2.decrypt(texto).decode()
-    return str(mensaje_recibido)
 
 mensaje_cifrado_des3_AES = cifrado_des3(mensaje_entrada,keydes3,iv)
 nonce, mensaje_cifrado_des3_AES, tag = cifrado_AES(mensaje_cifrado_des3_AES)
-
 mensaje_cifrado_des = cifrado_des(mensaje_entrada,keydes,iv)
-
 
 @app.route('/')
 def principal():
