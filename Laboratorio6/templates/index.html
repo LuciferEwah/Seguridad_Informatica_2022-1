@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Cliente</title>
+    <link rel="stylesheet" href="{{ url_for('static' , filename='css/cliente.css') }}">
+</head>
+<body>
+    {% if key_public[0] == key_private[0] %}
+    <h1>La sincronización es segura</h1>
+    <h1>Mensaje Encriptado: {{mensaje_encriptado_cliente}}</h1>
+    <h1>Mensaje Recibido: {{mensajerecibido}}</h1>
+    
+    {% else %}
+    <h1>Cuidao</h1>
+
+    {%endif%}
+</body>
+
+
+</html>
