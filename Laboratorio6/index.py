@@ -1,5 +1,3 @@
-from Crypto.Cipher import PKCS1_OAEP
-from Crypto.PublicKey import RSA
 from flask import Flask, render_template
 import os
 import rsa
