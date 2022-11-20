@@ -151,7 +151,7 @@ key_public=[n,e]
 key_private=[n,d]
 
 
-archivo = open("Laboratorio6\mensajeentrada.txt", "r")
+archivo = open("mensajeentrada.txt", "r")
 mensaje_entrada = str(archivo.readline().upper())
 archivo.close()
 

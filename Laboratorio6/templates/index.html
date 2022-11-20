@@ -6,9 +6,14 @@
 </head>
 <body>
     {% if key_public[0] == key_private[0] %}
+    <h1>↓↓↓ RSA ↓↓↓</h1>
     <h1>La sincronización es segura</h1>
     <h1>Mensaje Encriptado: {{mensaje_encriptado_cliente}}</h1>
     <h1>Mensaje Recibido: {{mensajerecibido}}</h1>
+
+    <h1>↓↓↓ el Gamal ↓↓↓</h1>
+    <h1>Mensaje Encriptado: {{mensaje_encriptado_gamal}}</h1>
+    <h1>Mensaje Recibido: {{mensajerecibidoGamal}}</h1>
     
     {% else %}
     <h1>Cuidao</h1>
